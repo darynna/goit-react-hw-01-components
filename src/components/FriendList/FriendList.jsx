@@ -1,11 +1,13 @@
-// export const FriendList = ({friends}) => {
-//     return <ul class="friend-list">
-//     {friends.map(({avatar, name, isOnline}) => (
-//       <li class="item">
-//       <span class="status"></span>
-//       <img class="avatar" src={avatar} alt="User avatar" width="48" />
-//       <p class="name">{name}</p>
-//     </li>
-//     ))} 
-//   </ul>
-// }
+import {FriendsWrap, Friends, FriendsInfo, Chip} from './FriendList.styled'
+
+export const FriendList = ({friends}) => {
+    return <FriendsWrap>
+    {friends.map(({avatar, name, isOnline}) => (
+      <Friends>
+      <Chip status={isOnline}></Chip>
+      <img class="avatar" src={avatar} alt="User avatar" width="48" />
+      <FriendsInfo>{name}</FriendsInfo>
+    </Friends>
+    ))} 
+  </FriendsWrap>
+}

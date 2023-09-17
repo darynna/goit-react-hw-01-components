@@ -5,7 +5,7 @@ width: 100%
 `
 export const StatisticTitle = styled.h2`
 text-align: center;
-color: grey;
+color: ${(props) => props.theme.colors.border};
 text-transform: uppercase;
 `
 
@@ -26,13 +26,13 @@ align-items: center;
 background-color: ${props => {
     switch(props.label){
         case '.docx':
-        return '#519dcd';
+        return props.theme.colors.statisticBlue;
         case '.pdf':
-        return '#64b25c';
+        return props.theme.colors.statisticGreen;
         case '.mp3':
-        return '#e690d6';
+        return props.theme.colors.statisticPink;
         case '.psd':
-            return '#df8f8f';
+            return props.theme.colors.statisticRed;
             default:
                 return 'white'
     }
@@ -41,10 +41,10 @@ background-color: ${props => {
 
 
 export const LabelText = styled.span`
-color: white
+color: ${(props) => props.theme.colors.background}
 `;
 
 export const PercentageText = styled.span`
-color: white;
+color: ${(props) => props.theme.colors.background};
 font-size: 24px
 `;

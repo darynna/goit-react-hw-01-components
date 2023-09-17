@@ -14,8 +14,9 @@ justify-content: center;
 gap: 12px
 `;
 
+
 export const Paragraph = styled.p`
-color: grey;
+color: ${props => props.theme.colors.border};
 `;
 
 
@@ -31,7 +32,7 @@ margin-bottom: 0;
 padding: 0;
 display: flex;
 justify-content: space-around;
-background-color: #d5dadd;
+background-color: ${props => props.theme.colors.secondaryBackground};
 `;
 
 export const StatsInfoItems = styled.li`
@@ -42,7 +43,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-border: 0.5px solid grey;
+border: 0.5px solid ${props => props.theme.colors.border};
 `;
 
 export const StatsText = styled.span`
