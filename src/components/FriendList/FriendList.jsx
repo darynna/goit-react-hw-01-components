@@ -1,13 +1,9 @@
-import {FriendsWrap, Friends, FriendsInfo, Chip} from './FriendList.styled'
+import {FriendsWrap} from './FriendList.styled'
+import {FriendListItem} from '../FriendListItem/FriendListItem'
 
-export const FriendList = ({friends}) => {
+
+export const FriendList = ({friendList}) => {
     return <FriendsWrap>
-    {friends.map(({avatar, name, isOnline}) => (
-      <Friends>
-      <Chip status={isOnline}></Chip>
-      <img class="avatar" src={avatar} alt="User avatar" width="48" />
-      <FriendsInfo>{name}</FriendsInfo>
-    </Friends>
-    ))} 
+<FriendListItem friends={friendList}/>
   </FriendsWrap>
 }

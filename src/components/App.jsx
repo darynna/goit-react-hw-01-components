@@ -4,15 +4,15 @@ import theme from '../constant/theme'
 import {AppWraper} from './App.styled'
 
 import {Profile} from './Profile/Profile'
-import user from './Profile/user.json'
+import user from '../data/user.json'
 
 import {Statistics} from './Statistics/Statistics'
-import statisticData from './Statistics/data.json'
+import statisticData from '../data/data.json'
 
-import friendList from "./FriendList/friends.json"
+import friendList from "../data/friends.json"
 import {FriendList} from './FriendList/FriendList'
 
-import transactions from './TransactionHistory/transactions.json'
+import transactions from '../data/transactions.json'
 import {TransactionHistory} from "./TransactionHistory/TransactionHistory"
 
 export const App = () => {
@@ -27,7 +27,7 @@ export const App = () => {
         stats={user.stats}
       />
       <Statistics stats={statisticData} title="Upload stats" />
-      <FriendList friends={friendList}/>
+      <FriendList friendList={friendList}/>
       <TransactionHistory transactions={transactions} />;
     </AppWraper>
     </ThemeProvider>
